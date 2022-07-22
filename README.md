@@ -8,7 +8,7 @@ The goal of this project is to be able to setup a fully working NixOS VM with ju
 The first command setup the NixOS system, while the second setup the user on the system with home-manager.
 
 Here are the steps:
-- Install NixOS
+- Install NixOS (follow the guide here to install NixOS the hard way (no installer, more fun)
 - Download the code from this repository to the `~/.dotfiles` folder on your system.
 - Enter the `~/.dotfiles` folder
 - Run `sudo nixos-rebuild switch --flake './system#nixos'`
