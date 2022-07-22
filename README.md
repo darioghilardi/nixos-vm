@@ -11,6 +11,7 @@ Here are the steps:
 - Install NixOS (follow the guide here to install NixOS the hard way (no installer, more fun)
 - Download the code from this repository to the `~/.dotfiles` folder on your system.
 - Enter the `~/.dotfiles` folder
+- Change the contents of `config.toml` with your own values
 - Run `sudo nixos-rebuild switch --flake './system#nixos'`
 - Run `nix run home-mananger --no-write-lock-file -- switch --flake './users#nixos'`
 

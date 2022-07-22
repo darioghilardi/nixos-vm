@@ -1,10 +1,11 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, lib, ... }:
+let
+  env = (builtins.fromTOML (builtins.readFile ../../config.toml));
+in {
   programs.git.enable = true;
 
-  programs.git.userName = "Dario Ghilardi";
-  programs.git.userEmail = "darioghilardi@webrain.it";
+  programs.git.userName = env.git.name;
+  programs.git.userEmail = env.git.email;
   programs.git.ignores = [ ".DS_Store" ];
   programs.git.extraConfig = {
     color.ui = "auto";
