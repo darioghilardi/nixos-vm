@@ -98,7 +98,12 @@
 
   programs.fish.shellAliases = {
     # Nix
-    nfb = "cd ~/dotfiles; nix build .#darwinConfigurations.DarioBook.system";
+    apply_sys = "env -C ~/.dotfiles sudo nixos-rebuild switch --flake './system#nixos'";
+    apply_user = "env -C ~/.dotfiles nix run home-manager --no-write-lock-file -- switch --flake './users#nixos'";
+    update_sys = "env -C ~/.dotfiles/system nix flake update";
+    update_user = "env -C ~/.dotfiles/users nix flake update";
+
+    # for nix darwin
     drs = "cd ~/dotfiles; darwin-rebuild switch --flake ~/dotfiles/";
 
     # General
