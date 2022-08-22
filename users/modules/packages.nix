@@ -77,6 +77,7 @@
     statix # lints and suggestions for the Nix programming language
     nixfmt
     nix-prefetch-git
+    cachix
 
     # Code
     heroku
